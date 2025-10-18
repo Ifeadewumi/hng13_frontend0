@@ -1,0 +1,116 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Card layout */
+article[data-testid="test-profile-card"] {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+
+article[data-testid="test-profile-card"]:hover {
+  transform: translateY(-4px);
+}
+
+.avatar-section {
+  align-self: center;
+}
+
+img[data-testid="test-user-avatar"] {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077ff;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p[data-testid="test-user-bio"] {
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Social links */
+nav[data-testid="test-user-social-links"] ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+nav[data-testid="test-user-social-links"] a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav[data-testid="test-user-social-links"] a:hover,
+nav[data-testid="test-user-social-links"] a:focus {
+  text-decoration: underline;
+}
+
+/* Lists */
+section {
+  margin-top: 1rem;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+ul[data-testid="test-user-hobbies"],
+ul[data-testid="test-user-dislikes"] {
+  list-style: disc;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  article[data-testid="test-profile-card"] {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .avatar-section {
+    flex: 1;
+    text-align: center;
+  }
+
+  .content {
+    flex: 2;
+  }
+}

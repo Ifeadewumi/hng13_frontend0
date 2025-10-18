@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HNG13 Stage 0 Profile Card - Frontend Wizards Task" />
+    <title>Profile Card | HNG13 Stage 0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <article data-testid="test-profile-card">
+        <figure class="avatar-section">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Profile picture of Ife Adewumi"
+            data-testid="test-user-avatar"
+          />
+        </figure>
+
+        <div class="content">
+          <header>
+            <h2 data-testid="test-user-name">Ife Adewumi</h2>
+          </header>
+
+          <p data-testid="test-user-bio">
+            Frontend developer passionate about clean design, accessible UI, and good coffee ☕.
+          </p>
+
+          <p>
+            Current time (ms): <span data-testid="test-user-time"></span>
+          </p>
+
+          <nav aria-label="Social Links" data-testid="test-user-social-links">
+            <ul>
+              <li>
+                <a
+                  href="https://twitter.com/TheIfeAdewumi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ifeadewumi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/ifeoluwa-adewumi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Photography</li>
+              <li>Hiking</li>
+              <li>Reading sci-fi novels</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Loud noises</li>
+              <li>Bad coffee</li>
+              <li>Unclear documentation</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
