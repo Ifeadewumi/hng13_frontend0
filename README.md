@@ -19,7 +19,7 @@ Open `index.html` directly in your browser.
 ---
 
 ## 🌐 Deployment
-- Live Demo: [https://yourusername.github.io/hng13-profile-card](#)
+- Live Demo: [https://ifeadewumi.github.io/hng13_frontend0/index.html](#)
 - Repository: [https://github.com/Ifeadewumi/hng13_frontend0](#)
 
 ---
