@@ -37,8 +37,8 @@ Open `index.html` directly in your browser.
 ---
 
 ## 🌐 Deployment
-- Live Demo: [https://ifeadewumi.github.io/hng13_frontend0/index.html](#)
-- Repository: [https://github.com/Ifeadewumi/hng13_frontend0](#)
+- Live Demo: [https://ifeadewumi.github.io/hng13_frontend0/index.html](https://ifeadewumi.github.io/hng13_frontend0/index.html)
+- Repository: [https://github.com/Ifeadewumi/hng13_frontend0](https://github.com/Ifeadewumi/hng13_frontend0)
 
 ---
 

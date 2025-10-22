@@ -1,4 +1,4 @@
-/* Global reset */
+/* Global Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,23 +7,21 @@
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background-color: #f7f9fc;
+  background: linear-gradient(135deg, #eef3ff, #f9fbfd);
   color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
+  padding: 2rem 1rem;
 }
 
-main {
-  width: 100%;
-  padding: 1rem;
-}
-
+/* Navigation */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
   justify-content: center;
   padding: 1rem 0;
 }
@@ -32,80 +30,35 @@ main {
   text-decoration: none;
   color: #0077ff;
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-.main-nav a:focus,
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #005fcc;
   text-decoration: underline;
 }
 
-/* Form */
-form {
-  max-width: 500px;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-label {
-  font-weight: 600;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.6rem;
-  border-radius: 0.4rem;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-button[type="submit"] {
-  padding: 0.8rem 1.2rem;
-  background: #0077ff;
-  color: #fff;
-  border: none;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-button[type="submit"]:hover
-button[type="submit"]:focus {
-  background: #005fcc;
-}
-
-/* System Messages */
-.error {
-  color: red;
-  font-size: 0.9rem;
-}
-
-.success {
-  color: green;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Card layout */
+/* Main Card Layout */
 article[data-testid="test-profile-card"] {
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 article[data-testid="test-profile-card"]:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Avatar */
 .avatar-section {
   align-self: center;
 }
@@ -118,6 +71,7 @@ img[data-testid="test-user-avatar"] {
   border: 3px solid #0077ff;
 }
 
+/* Content */
 .content h2 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
@@ -125,10 +79,10 @@ img[data-testid="test-user-avatar"] {
 
 p[data-testid="test-user-bio"] {
   margin-bottom: 0.8rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* Social links */
+/* Social Links */
 nav[data-testid="test-user-social-links"] ul {
   list-style: none;
   display: flex;
@@ -141,14 +95,16 @@ nav[data-testid="test-user-social-links"] a {
   color: #0077ff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav[data-testid="test-user-social-links"] a:hover,
 nav[data-testid="test-user-social-links"] a:focus {
+  color: #005fcc;
   text-decoration: underline;
 }
 
-/* Lists */
+/* Lists (Hobbies, Dislikes) */
 section {
   margin-top: 1rem;
 }
@@ -166,7 +122,86 @@ ul[data-testid="test-user-dislikes"] {
   line-height: 1.5;
 }
 
-/* Responsive layout */
+/* Form Styles */
+form {
+  width: 100%;
+  max-width: 700px; /* ✅ Wider form for desktop */
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f9faff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 4px rgba(0, 119, 255, 0.3);
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 0.9rem 1.2rem;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: #005fcc;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: green;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* About Page */
+main[data-testid="test-about-page"] h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0077ff;
+}
+
+section[data-testid^="test-about-"] {
+  background: #f9faff;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Layout */
 @media (min-width: 768px) {
   article[data-testid="test-profile-card"] {
     flex-direction: row;
@@ -180,5 +215,9 @@ ul[data-testid="test-user-dislikes"] {
 
   .content {
     flex: 2;
+  }
+
+  form {
+    max-width: 80%;
   }
 }
